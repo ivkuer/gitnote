@@ -90,11 +90,16 @@ alias gs='git status'
 
 ## 打标签
 
+标签只适合用于功能开发完成的项目，不可以随意打标签。
+
 - `git tag -l` 查看已有的标签列表
 - `git tag -l "筛选标签"` 使用正则来筛选，eg: "v1.8.5*"
 - `git tag -a v1.0 -m "my version 1.0"` 创建附注标签
 - `git tag v1.2` 创建轻量标签
 - `git show <tag>` 标签信息和与之对应的提交信息，*轻量标签*只能看见提交信息
+- `git tag -d <tagname>`删除标签
+
+## 分支
 
 - `git branch` - 查看所以分支
 - `git branch <branch>` - 创建分支
@@ -102,4 +107,5 @@ alias gs='git status'
 - `git checkout -b <branch>` - 创建一个新分支，并切换到此分支
 - `git merge <branch>` - 在现在的分支上**合并**其他分支
 - `git branch -d <branch>` - **删除**分支
+- `git branch --no-merged` 查看未合并的分支
 - `git rebase <branch>` 移动子分支到最新的主分支，解决bug，分支合并更简单 
